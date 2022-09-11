@@ -1,6 +1,5 @@
 interface aa {
     public void display();
-
     public void show();
 
 }
@@ -13,14 +12,19 @@ abstract class awe {
     abstract void baa();
 }
 
-class awes extends awe{
-    void baa(){
+class awes extends awe {
+    void baa() {
         System.out.println("abc");
     }
 }
+
 class Inter implements aa, bb {
     public void display() {
         System.out.println("method in aa interface");
+    }
+
+    public void show() {
+        System.out.println('a');
     }
 
     public void dois() {
@@ -31,11 +35,7 @@ class Inter implements aa, bb {
 
 public class Abstraction {
     public static void main(String[] args) {
-        Inter a = new Inter() {
-            public void show() {
-                System.out.println("hi all");
-            }
-        };
+        Inter a = new Inter();       
         a.display();
         a.dois();
         a.show();
